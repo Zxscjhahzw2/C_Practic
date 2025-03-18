@@ -1524,6 +1524,135 @@ op为运算符，它的取值只能是+、-、*、/。。要求必须使用switch-case语句实现。
 //	}
 //}
 
-	return 0;
 
+/*有一篇文章，共有3行文字，每行小于80个字符。
+要求分别统计出其中英文大写字母、小写字母、数字、空格以及其他字符的个数*/
+	
+
+
+
+/*输出“魔方阵”，所谓魔方阵是指这样的方阵，它的每一行，
+每一列之和均相等。例如，三阶魔方阵为 816 357 492 输入行数，
+要求输出1~n^2的自然数构成的魔方阵（任意满足条件的方针都可以）*/
+//不会！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+	//int n;
+	//int i, j, k;
+	//k = 0;
+	//int row, list,state;
+	////int cnt_row1,cnt_row2,cnt_list1,cnt_list2;
+	////cnt_list1 = 0;
+	////cnt_list2 = 0;
+	////cnt_row1=0;
+	////cnt_row2 = 0;
+	//state = 0;//1表示成功
+	//scanf_s("%d", &n);
+	//int* arr = (int*)malloc(n*n * sizeof(int));
+	//int*temp= (int*)malloc(n * n * sizeof(int));
+	//int *cnt_row= (int*)malloc(n * sizeof(int));
+	//int* cnt_list = (int*)malloc(n * sizeof(int));
+	//if (temp == NULL) {
+	//	return 1;
+	//}
+	//if (arr == NULL) {
+	//	return 1;
+	//}
+	//if (cnt_list == NULL) {
+	//	return 1;
+	//}
+	//if (cnt_row == NULL) {
+	//	return 1;
+	//}
+	//for (int i = 1; i <= n*n; i++) {
+	//	arr[i] = i;
+	//	temp[i] = i;
+	//}
+	//list = 0;
+	////先把n*n的矩阵展示出来，判断行列是否相等，若不等重排
+	//while(state!=1){
+
+	//	for (row = 0; row < n; row++) {//用来得到每行总和
+	//		for (list = 0; list < n; list++) {
+	//			//先判断每行是否和一样
+	//			cnt_row[row] += arr[row * n + list];
+	//		}
+	//	}
+
+	//	for (list = 0; list < n; list++) {//用来得到每列总和
+	//		for (row = 0; row < n; row++) {
+	//			//先判断每行是否和一样
+	//			cnt_list[list] += arr[list + row * n];
+	//		}
+	//	}
+
+	//	for (i = 0; i < n - 1; i++) {
+	//		if (cnt_list[i] != cnt_list[i + 1] || cnt_row[i] != cnt_row[i + 1]) {
+	//			break;
+	//		}
+	//		else
+	//		{
+	//			if (i == n - 2) {//全部成功
+	//				state = 1;
+	//			}
+	//		}
+	//	}
+	//	//若state不等于1，重新排序
+	//	
+	//	/*
+	//	用树枝排列结果,选择第一位直到最后一位
+	//	*/
+
+	//	if (state == 0) {
+	//		for (i = n*n; i>0; i--) {
+	//			
+	//			for (j =0;j<i; j++) {
+	//				arr[j] = temp[i];
+	//			}
+	//		}
+	//	}
+	//
+	//}
+
+//int a[15][15], i, j, k, p, n;
+//p = 1;
+//while (p == 1) {
+//
+//	scanf_s("%d", &n);
+//	if ((n != 0) && (n <= 15) && (n % 2 != 0))
+//		p = 0;
+//}
+//for (i = 1; i <= n; i++)
+//for (j = 1; j <= n; j++)
+//a[i][j] = 0;
+//j = n / 2 + 1;
+//a[1][j] = 1;
+//for (k = 2; k <= n * n; k++) {
+//	i = i - 1;
+//	j = j + 1;
+//	if ((i < 1) && (j > n)) {
+//		i = i + 2;
+//		j = j - 1;
+//	}
+//	else {
+//		if (i < 1) i = n;
+//		if (j > n) j = 1;
+//	}
+//	if (a[i][j] == 0)
+//		a[i][j] = k;
+//	else {
+//		i = i + 2;
+//		j = j - 1;
+//		a[i][j] = k;
+//	}
+//}
+//for (i = 1; i <= n; i++) {
+//	for (j = 1; j <= n; j++)
+//		printf("%d ", a[i][j]);
+//	printf("\n");
+//}
+
+
+
+	return 0;
 }
+	
+
