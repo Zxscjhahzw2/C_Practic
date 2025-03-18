@@ -1091,10 +1091,439 @@ op为运算符，它的取值只能是+、-、*、/。。要求必须使用switch-case语句实现。
 //	}
 //}
 
+//char c1 = 'a', c2 = 'b', c3 = 'c', c4 = '\101', c5 = '\116';
+//printf("a%c b%c\tc%c\tabc\n", c1, c2, c3);
+//printf("\t\b%c %c", c4, c5);
+
+
+/*方程x1+x2+x3+x4=30有多少满足x1>=2,x2>=0,x3>=-5,x4>=8的整数解？*/
+//int x1, x2, x3, x4,temp;
+//temp = 0;
+//for (x1 = 2; x1 <= 35; x1++) {
+//	for (x2 = 0; x2 <= 35; x2++) {
+//		for (x3 = -5; x3 <= 35; x3++) {
+//			for (x4 = 8; x4 <= 35; x4++) {
+//				if (x1 + x2 + x3 + x4 == 30) {
+//					temp++;
+//				}
+//			}
+//		}
+//	}
+//}
+//printf("%d", temp);
+
+
+/*一个球从100m高度自由落下，每次落地后反跳回原高度的一半，再落下，再反弹。
+求它在第10次落地时，共经过多少米，第10次反弹多高。*/
+
+//double i, hight1, hight2, total_hight, m;
+//i = 0;
+//m = 100;
+//total_hight = 0;
+//while (i != 10) {
+//	hight1 = m / (pow(2, i));
+//	hight2 = hight1 / 2;
+//	total_hight = hight1 + hight2 + total_hight;
+//	i++;
+//}
+//printf("第10次落地时共经过%.6f米\n", total_hight);
+//printf("第10次反弹%.6f米", hight2);
+
+
+//double a, b, out,out1,temp;
+//
+//a = 2;
+//b = 3;
+//out = 2;
+//for (int i = 1; i < 20; i++) {
+//	out1 = b / a;
+//	temp = a;
+//	a = b;
+//	b = temp+b;
+//	out += out1;
+//}
+//printf("%.6f", out);
+
+
+/*
+求阶乘
+求1!+2!+…+20!，其中x!=1*2*…*x，表示阶乘。*/
+
+//long long out=0;
+//long long out1=1;
+//int i = 0;
+//int n;
+//scanf_s("%d", &n);
+//while (i != n) {
+//	for (int j = 1; j <= i + 1;j++) {
+//		out1 *= j;
+//	}
+//	out += out1;
+//	out1 = 1;
+//	i++;
+//}
+//printf("%lld", out);
 
 
 
+	//printf("**********************************************************\n");
+	//for (int i = 0; i <= 330; i = i + 15) {
+	//	double t = sin(2 * 3.1415926 * i / 360);
+	//	printf("sin(%3d)=%+.4lf", i, t);
+	//	if (t > 0) {
+	//		for (int i = 0; i < 24; i++)
+	//			printf(" ");
+	//		printf("*");
+	//		for (int i = 0; i < t * 16; i++)
+	//			printf(" ");
+	//		printf("*");
+	//	}
+	//	if (t < 0) {
+	//		for (int i = 0; i < 24 + t * 16; i++)
+	//			printf(" ");
+	//		printf("*");
+	//		for (int i = 0; i < -t * 16 - 2; i++)
+	//			printf(" ");
+	//		printf("*");
+	//	}
+	//	if (t == 0) {
+	//		for (int i = 0; i < 24; i++)
+	//			printf(" ");
+	//		printf("*");
+	//	}
+	//	printf("\n");
 
-return 0;
+	//}
+
+
+/*编写程序求一个整数的任意次方的最后三位数。即求xa 的最后三位数，其中x，a从键盘上输入。*/
+
+/*编写程序计算某区间内素数的个数cnt，并按所求素数的值从大到小的顺序，再计算其间隔减、加之和，
+即第1个素数－第2个素数+第3个素数－第4个素数+第5个素数……的值sum。*/
+
+//int sum = 0;
+//int cnt = 0;
+//int temp, i, j, a, b,sign;
+//sign = 0;//0为正,1位负
+//scanf_s("%d %d",&a,&b);
+//for (i = a; i <= b; i++) {
+//	for (j = 2; j < i; j++) {
+//		if (i % j == 0)break;
+//	}
+//	if (j == i) {
+//		cnt++;
+//		if (sign == 0) {
+//			sum += j;
+//			sign = 1;
+//		}
+//		else {
+//			sum -= j;
+//			sign = 0;
+//		}
+//	}
+//}
+//printf("%d %d", cnt, sum);
+
+/**/
+
+//double a, out, temp;
+//double i = 1;
+//int state = 0;
+//a = 1;
+//out = 0;
+//while (1/i >= 0.000001) {
+//	a = 1 / i;
+//	i = i + 2;
+//	if (state == 0) {
+//		out += 4 * a;
+//		state = 1;
+//	}
+//	else
+//	{
+//		out -= 4 * a;
+//		state = 0;
+//	}
+//
+//}
+//printf("%lf", out);
+
+
+/*常见的钟表一般都有时针和分针，在任意时刻时针和分针都形成一定夹角；
+现已知当前的时刻，编写程序求出该时刻时针和分针的夹角（该夹角大小≤180°）。
+当前时刻值输入格式为“小时：分”，例如：11:12。*/
+//每一个小时30度，每一分钟6度
+//int hour, min, temp, i;
+//int out;
+//scanf_s("%d:%d", &hour, &min);
+//if (hour > 12)hour = hour - 12;
+//out = hour * 30 - min * 6+min*0.5;
+//if (abs(out) > 180) {
+//	out = 360 - abs(out);
+//}
+//else
+//{
+//	out = abs(out);
+//}
+//printf("%d.00", out);
+
+
+/*设圆半径r，圆柱高h，求圆周长、圆面积、圆球表面积、圆球体积、圆柱体积。
+编写程序用scanf输入数据，输出计算结果；输出时要求有文字说明，取小数点后2位数字。*/
+
+//double r, h, circle, s, s_qiu, v_qiu, v_zhu;
+//double pi = 3.14;
+//scanf_s("%lf %lf", &r, &h);
+//circle = 2*pi * r;
+//s = pi * r * r;
+//s_qiu = 4 * pi * r * r;
+//v_qiu = ((float)4 / 3) * pi * r * r * r;
+//v_zhu = pi * r * r * h;
+//printf("圆周长:%.2lf\n",circle );
+//printf("圆面积:%.2lf\n", s);
+//printf("圆球表面积:%.2lf\n",s_qiu );
+//printf("圆球体积:%.2lf\n", v_qiu);
+//printf("圆柱体积:%.2lf\n", v_zhu);
+
+
+/*把200以内的所有素数存放到一维数组中并输出(动态分配内存)*/
+//int n=0;
+//int i, j, k;
+//int* arr = (int*)malloc(200 * sizeof(int));
+//if (arr == NULL) {
+//	return 1;
+//}
+//for (i = 2; i < 200; i++) {
+//	for (j = 2; j < i; j++) {
+//		if (i % j == 0)break;
+//	}
+//	if (j == i) {
+//		arr[n] = i;
+//		n++;
+//	}
+//}
+//int* temp = (int*)realloc(arr, n * sizeof(int));
+//if (temp == NULL) {
+//	printf("Reallocation failed\n");
+//	free(arr);  // 释放旧内存，防止泄漏
+//	return 1;
+//}
+//arr = temp;
+//for (i = 0; i < n; i++) {
+//	printf("%d ", arr[i]);
+//}
+//free(arr);
+
+/*将一个二维数组行和列元素互换，存到另一个二维数组中并输出这两个矩阵。*/
+
+//int a[3][4];
+//int b[4][3];
+//int i, j;
+//for (int i = 0; i < 3; i++) {
+//	for (int j = 0; j < 4; j++) {
+//		scanf_s("%d", &a[i][j]);
+//	}
+//}
+//
+//for (i = 0; i < 3; i++) {
+//	for (int j = 0; j < 4; j++) {
+//		b[j][i] = a[i][j];
+//		
+//	}
+//}
+//
+//for (i = 0; i < 4; i++) {
+//	for (int j = 0; j < 3; j++) {
+//		printf("%d ", b[i][j]);
+//
+//	}
+//}
+
+
+/*输入一行字符，统计其中有多少个单词，单词之间用空格分隔开*/
+
+//char string[81];
+//int i, num = 0, word = 0;
+//char c;
+//gets(string);
+//for (i = 0; (c = string[i]) != '\0'; i++)
+//if (c == ' ') word = 0;
+//else if (word == 0) {
+//	word = 1;
+//	num++;
+//}
+//printf("%d", num);
+
+
+/*编写一个程序，统计输入一行字符串中各个字母使用频率（大小写不区分），
+将次数不为零的字母及次数按照字母ASCII码从小到大输出。*/
+//int i = 0;
+//int j, k;
+//int cnt;
+//cnt = 1;
+//char temp;
+//char b[40];
+//char arr[40];
+//gets(arr);
+//
+//for (i = 0; arr[i] != '\0'; i++) {
+//}
+//for (j = 0; j < i-1; j++) {
+//	for (k = 0; k < i-1; k++) {
+//		if (arr[k] > arr[k + 1]) {
+//			temp = arr[k];
+//			arr[k] = arr[k + 1];
+//			arr[k + 1] = temp;
+//		}
+//	}
+//}
+//
+//
+//	for (k = 0; k <= i-1; k++) {
+//		if((arr[k]>='A'&&arr[k]<='Z')||(arr[k]>='a'&&arr[k]<='z')){
+//		
+//			if (arr[k] == arr[k + 1]) {
+//				cnt++;
+//			}
+//			else
+//			{
+//					printf("%c:%d ", arr[k], cnt);
+//				
+//				cnt = 1;
+//			}
+//		}
+//	}
+
+
+/*二维数组每行保存着一个整数集合，共有5个集合，每个集合均包含5个元素。
+编写程序求出这五个集合的交集，以及交集中元素的个数。
+所谓交集是指由所有同时出现在这5个集合中的元素组成的集合。 五个集合分别为： 
+{12,35,3,9,0},{2,35,9,12,1},{35,12,0,1,9},{4,90,35,9,12},{11,9,0,12,35}*/
+
+//int i, j,row,list;
+//i = 0;
+//j = 0;
+//row = 0;
+//int state = 1;
+//int a[5][5]= { 12,35,3,9,0,
+//			   2,35,9,12,1 ,
+//			   35,12,0,1,9, 
+//			   4,90,35,9,12,
+//			   11,9,0,12,35 };
+//
+//for (j = 0; j < 5; j++) {
+//	for (int row = 1; row < 5; row++) {
+//		for (int list = 0; list < 5; list++) {
+//			if (a[0][j] == a[row][list]) {
+//				state++;
+//				break;
+//			}
+//
+//		}
+//	}
+//	if (state == 5) {
+//		printf("%d ", a[0][j]);
+//	}
+//	state = 1;
+//}
+
+
+/*对一个4×4的二维数组左下三角的全部元素（包含对角线上的元素）作如下变换： 
+若该数是素数则用它的后继素数替换； 若该数不是素数，则用0替换该数。 
+将变换后的数组及其数组左下三角的元素中的素数个数打印出来。 
+测试数据： 原数组： 3 6 4 17 8 5 9 10 9 19 7 20 4 14 21 23*/
+
+//int a[4][4] = { 3,6,4,17,
+//				8,5,9,10,
+//				9,19,7,20,
+//				4,14,21,23 };
+//int b[10] = {3,8,5,9,19,7,4,14,21 ,23};
+//
+//int i, j, k,y;
+//int row, list;
+//int count;
+//int state = 0;
+//count = 0;
+//y = 0;
+////整理b数组
+//for (int i = 0; i < 10; i++) {
+//	for (j = 2; j < b[i]; j++) {
+//		if (b[i] % j == 0) {
+//			b[i] = 0;
+//			count++;
+//			break;
+//		}
+//	}
+//	if (j == b[i]) {
+//		//说明是素数，找下一个素数
+//		while (1) {
+//			b[i]++;
+//			for (k = 2; k < b[i]; k++) {
+//				if (b[i] % k == 0) {
+//					break;
+//				}
+//			}
+//			if (b[i] == k) {
+//				break;
+//			}
+//		}
+//	}
+//}
+//
+//
+////将b数组填入a数组
+//for (i = 0; i < 4; i++) {
+//	state = 0;
+//	for (j = 0; j < 4; j++) {
+//		a[i][j] = b[y];
+//		y++;
+//		if (state == i) {
+//			break;
+//		}
+//		else
+//		{
+//			state++;
+//		}
+//	}
+//}
+//state = 0;
+//for (i = 0; i < 4; i++) {
+//	for (j = 0; j < 4; j++) {
+//		printf("%d ", a[i][j]);
+//
+//	}
+//	printf("\n");
+//}
+//printf("count=%d", count);
+
+
+/*键盘输入一个长度为10的int型数组，删除数组中重复出现的数据 如，
+原数组是： 1 4 2 3 4 1 2 5 5 9，输出：1 4 2 3 5 9*/
+//int j;
+//int a[10];
+//for (int i = 0; i < 10; i++) {
+//	scanf_s("%d", &a[i]);
+//}
+//j = 0;
+//
+//for (int i = 0; i < 10; i++) {
+//	for (int k = 0; k < 9; k++) {
+//		if (a[k] > a[k + 1]) {
+//			j = a[k];
+//			a[k] = a[k + 1];
+//			a[k + 1] = j;
+//		}
+//	}
+//}
+//
+//for (int i = 0; i < 10; i++) {
+//	if (a[i] == a[i + 1])a[i] = 0;
+//}
+//for (int i = 0; i < 10; i++) {
+//	if (a[i] != 0) {
+//		printf("%d ", a[i]);
+//	}
+//}
+
+	return 0;
 
 }
