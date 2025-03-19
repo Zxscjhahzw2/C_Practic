@@ -3,6 +3,7 @@
 #include<string.h>
 #include<math.h>
 #include <stdlib.h>
+#include"pailie.h"
 //如提示运行通过，但解题失败，认真对比预期输出和实际输出之间的差异
 int main()
 {
@@ -1527,7 +1528,36 @@ op为运算符，它的取值只能是+、-、*、/。。要求必须使用switch-case语句实现。
 
 /*有一篇文章，共有3行文字，每行小于80个字符。
 要求分别统计出其中英文大写字母、小写字母、数字、空格以及其他字符的个数*/
-	
+int i, j, k;
+int digit, lower, upper, space, other;
+digit = 0;
+lower = 0;
+upper = 0;
+space = 0;
+other = 0;
+char arr[3][80];
+char temp;
+for (int i = 0; i < 3; i++) {
+	gets(arr[i]);
+}
+for (int i = 0; i < 3; i++) {
+
+	for (j = 0; arr[i][j] != '\0'; j++) {
+		temp = arr[i][j];
+		if (temp >= 'A' && temp <= 'Z') upper++;
+		else if (temp >= 'a' && temp <= 'z')lower++;
+		else if (temp >= '0' && temp <= '9')digit++;
+		else if (temp == ' ')space++;
+		else other++;
+
+	}
+}
+
+printf("upper case:%d\n", upper);
+printf("lower case:%d\n", lower);
+printf("digit:%d\n", digit);
+printf("space:%d\n", space);
+printf("other:%d", other);
 
 
 
@@ -1649,6 +1679,16 @@ op为运算符，它的取值只能是+、-、*、/。。要求必须使用switch-case语句实现。
 //		printf("%d ", a[i][j]);
 //	printf("\n");
 //}
+
+//全排列()递归
+//int n;
+//printf("请输入 n: ");
+//scanf_s("%d", &n);
+//
+//int size = n * n; // 1 到 n^2
+//generatePermutations(0, size);
+
+
 
 
 
