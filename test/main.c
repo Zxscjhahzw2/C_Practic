@@ -1528,36 +1528,36 @@ op为运算符，它的取值只能是+、-、*、/。。要求必须使用switch-case语句实现。
 
 /*有一篇文章，共有3行文字，每行小于80个字符。
 要求分别统计出其中英文大写字母、小写字母、数字、空格以及其他字符的个数*/
-int i, j, k;
-int digit, lower, upper, space, other;
-digit = 0;
-lower = 0;
-upper = 0;
-space = 0;
-other = 0;
-char arr[3][80];
-char temp;
-for (int i = 0; i < 3; i++) {
-	gets(arr[i]);
-}
-for (int i = 0; i < 3; i++) {
-
-	for (j = 0; arr[i][j] != '\0'; j++) {
-		temp = arr[i][j];
-		if (temp >= 'A' && temp <= 'Z') upper++;
-		else if (temp >= 'a' && temp <= 'z')lower++;
-		else if (temp >= '0' && temp <= '9')digit++;
-		else if (temp == ' ')space++;
-		else other++;
-
-	}
-}
-
-printf("upper case:%d\n", upper);
-printf("lower case:%d\n", lower);
-printf("digit:%d\n", digit);
-printf("space:%d\n", space);
-printf("other:%d", other);
+//int i, j, k;
+//int digit, lower, upper, space, other;
+//digit = 0;
+//lower = 0;
+//upper = 0;
+//space = 0;
+//other = 0;
+//char arr[3][80];
+//char temp;
+//for (int i = 0; i < 3; i++) {
+//	gets(arr[i]);
+//}
+//for (int i = 0; i < 3; i++) {
+//
+//	for (j = 0; arr[i][j] != '\0'; j++) {
+//		temp = arr[i][j];
+//		if (temp >= 'A' && temp <= 'Z') upper++;
+//		else if (temp >= 'a' && temp <= 'z')lower++;
+//		else if (temp >= '0' && temp <= '9')digit++;
+//		else if (temp == ' ')space++;
+//		else other++;
+//
+//	}
+//}
+//
+//printf("upper case:%d\n", upper);
+//printf("lower case:%d\n", lower);
+//printf("digit:%d\n", digit);
+//printf("space:%d\n", space);
+//printf("other:%d", other);
 
 
 
@@ -1689,6 +1689,28 @@ printf("other:%d", other);
 //generatePermutations(0, size);
 
 
+////输出杨辉三角形(10行)
+//int i, j, k;
+//int a[10],b[10];//b是上一层的值
+//
+//for (int i = 0; i < 10; i++) {
+//	a[i] = 1;
+//	b[i] = 0;
+//}
+//
+//for (i = 0; i < 10; i++) {
+//	for (j = 0; j <= i; j++) {
+//		if(j>=1){ 
+//			a[j] = b[j - 1] + b[j]; 
+//		}
+//		printf("%d ", a[j]);
+//	}
+//	for (j = 0; j <= i; j++) {
+//		b[j] = a[j];
+//	}
+//
+//	printf("\n");
+//}
 
 
 
