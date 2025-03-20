@@ -4,6 +4,7 @@
 #include<math.h>
 #include <stdlib.h>
 #include"pailie.h"
+#include"queen.h"
 //如提示运行通过，但解题失败，认真对比预期输出和实际输出之间的差异
 int main()
 {
@@ -1711,6 +1712,29 @@ op为运算符，它的取值只能是+、-、*、/。。要求必须使用switch-case语句实现。
 //
 //	printf("\n");
 //}
+
+//八皇后问题：在一个8×8国际象棋盘上，有8个皇后，每个皇后占一格；要求皇后间不会出现相互“攻击”的现象，
+// 即不能有两个皇后处在同一行、同一列或同一对角线上。编写程序求共有多少种不同的排列方法。
+//使用头文件queen.h
+//char queen[8][8];
+//int i, j, k, temp;
+//temp = 0;
+//关心每一行上有没有重复的(难)
+
+
+//backtrack(0);
+//printf("共有%d种解法", sum);
+
+
+
+/*编写程序求两个非常大的正整数的乘积N×M。（提示：使用数组来保存非常大的正整数的每一位）*/
+//long long a, b, c;
+//scanf_s("%lld %lld", &a, &b);
+////printf("%zu", sizeof(long long));
+//printf("%lld", a* b);
+
+
+
 
 
 
